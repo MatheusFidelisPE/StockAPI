@@ -3,19 +3,16 @@ package com.project.bootcamp.controller;
 
 import com.project.bootcamp.model.dto.StockDTO;
 import com.project.bootcamp.service.StockService;
-import org.apache.tomcat.jni.Local;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 
-import javax.print.attribute.standard.Media;
 import javax.validation.Valid;
-import java.time.LocalDate;
-import java.util.ArrayList;
 import java.util.List;
 
+@CrossOrigin
 @RestController
 @RequestMapping(value = "/stock")
 public class StockController {
