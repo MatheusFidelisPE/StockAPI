@@ -4,6 +4,10 @@ import com.project.bootcamp.model.Stock;
 import com.project.bootcamp.model.dto.StockDTO;
 import org.springframework.stereotype.Component;
 
+import java.time.DateTimeException;
+import java.util.List;
+import java.util.stream.Collectors;
+
 @Component
 public class MapperStock {
 
@@ -29,5 +33,10 @@ public class MapperStock {
         dto.setVariation(stock.getVariation());
 
         return dto;
+    }
+
+    public List<StockDTO> toDtoAll(List<Stock> stockList) {
+        List<StockDTO> listStockDTO = stockList.stream().map(x -> this.toDto(x)).collect(Collectors.toList());
+        return listStockDTO;
     }
 }

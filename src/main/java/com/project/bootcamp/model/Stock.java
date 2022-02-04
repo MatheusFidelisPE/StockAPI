@@ -10,7 +10,7 @@ public class Stock {
 
     @Id
     @Column(name = "id")
-    @GeneratedValue(strategy = GenerationType.AUTO)
+    @GeneratedValue(strategy = GenerationType.AUTO)         // Se eu tivesse fazendo o banco gerar o id automaticamente, teria acesso ao id do registro?
     private Long id;
 
     @Column(name = "name")
